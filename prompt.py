@@ -22,8 +22,8 @@ if selection == 'Personal PII':
   num_entries = st.number_input("How many key-value pairs do you want to add?", min_value=0, value=1)
   
   for i in range(int(num_entries)):
-      key = st.text_input(f"Enter key for entry {i+1}:", key=f"key_{i}")
-      value = st.text_input(f"Enter value for entry {i+1}:", key=f"value_{i}")
+      key = st.text_input(f"Enter Key{i+1}:", key=f"key_{i}")
+      value = st.text_input(f"Enter Regular Expression {i+1}:", key=f"value_{i}")
       if key:  # Only add if a key is provided
           user_dict[key] = value
   
