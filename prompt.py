@@ -10,9 +10,11 @@ if selection == 'Home':
 
 if selection == 'Personal PII':
   country = st.selectbox('Select', ('Pakistan','USA'))
-  options = st.multiselect(
+  personal_pii_options = st.multiselect(
     "What are your favorite colors?",
-    ["Green", "Yellow", "Red", "Blue"],
-    default=["Yellow", "Red"],
+    ["Name","Email","Phone","Address", "Date of Birth","Mother's name","Social Media Handles","National ID Number (e.g., CNIC, SSN, Aadhaar)","Passport Number","Driver’s License Number","Voter ID Number","Tax Identification Number","Bank Account Number","Credit/Debit Card Numbers","Digital Wallet IDs (PayPal, Apple Pay, etc.)"],
+    default=["Name","Email","Phone"],
     )
+  st.write(personal_pii_options)
+
 
