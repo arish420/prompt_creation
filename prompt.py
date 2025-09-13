@@ -1,4 +1,5 @@
 import streamlit as st
+from langchain_core.prompts import PromptTemplate
 
 
 st.title("Create your Custom Prompts")
@@ -56,8 +57,21 @@ if selection == 'Personal PII':
 
                             ### Target Text: {sensitive_text}""",
                             # input_variables=['sensitive_text','target_country']
-    st.write(prompt_text)                        # )
+    personal_pii = PromptTemplate(template=prompt_text,input_variables=['sensitive_text'])
 
+    st.write(prompt_text)                        # )
+    # Save + Download
+    if st.button("Save & Download Template"):
+        buffer = io.StringIO()
+        personal_pii.save(buffer)   # saves as JSON to file-like object
+        data = buffer.getvalue()
+        st.download_button(
+            label="Download PromptTemplate JSON",
+            data=data,
+            file_name=f"{name}.json",
+            mime="application/json"
+        )
+    
 
     
     
