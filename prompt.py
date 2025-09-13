@@ -17,7 +17,7 @@ if selection == 'Personal PII':
     )
   st.write(personal_pii_options)
 
-  regular_exp = st.write("Enter Regular Expression, if required")
+  regular_exp = st.write("Enter Regular Expression, if required -> e.g key: mac-address, value: regular expression to match mac-address")
   user_dict = {}
   num_entries = st.number_input("How many key-value pairs do you want to add?", min_value=0, value=1)
   
