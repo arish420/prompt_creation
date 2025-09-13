@@ -17,18 +17,20 @@ if selection == 'Personal PII':
     )
   st.write(personal_pii_options)
 
-  regular_exp = st.write("Enter Regular Expression, if required -> e.g key: mac-address, value: regular expression to match mac-address")
-  user_dict = {}
-  num_entries = st.number_input("How many key-value pairs do you want to add?", min_value=0, value=0)
-  
-  for i in range(int(num_entries)):
-      key = st.text_input(f"Enter Key{i+1}:", key=f"key_{i}")
-      value = st.text_input(f"Enter Regular Expression {i+1}:", key=f"value_{i}")
-      if key:  # Only add if a key is provided
-          user_dict[key] = value
-  
-  if user_dict:
-      st.write("Your dictionary:")
-      st.write(user_dict)
+  st.expander("Regular Expression/Few-shots"):
 
-
+    regular_exp = st.write("Enter Regular Expression/Few-shots, if required -> e.g key: mac-address, value: regular expression to match mac-address")
+    user_dict = {}
+    num_entries = st.number_input("How many key-value pairs do you want to add?", min_value=0, value=0)
+    
+    for i in range(int(num_entries)):
+        key = st.text_input(f"Enter Key{i+1}:", key=f"key_{i}")
+        value = st.text_input(f"Enter Regular Expression {i+1}:", key=f"value_{i}")
+        if key:  # Only add if a key is provided
+            user_dict[key] = value
+    
+    if user_dict:
+        st.write("Your dictionary:")
+        st.write(user_dict)
+  
+  
