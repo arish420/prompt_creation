@@ -36,8 +36,8 @@ if selection == 'Personal PII':
     # pass
     prompt_text = """You are a Data Privacy Expert. You need to extract Personally Identifiable Information (PII).\n
                             ### Your target PII is as follows:"""
-    for i in personal_pii_options.keys():
-        prompt_text = prompt_text + "\n ###" + personal_pii_options[i]
+    for i in personal_pii_options:
+        prompt_text = prompt_text + "\n ###" + i[1]
     for i in user_dict.keys():
         prompt_text = prompt_text + "\n" + user_dict[i]
     st.write(prompt_text)
