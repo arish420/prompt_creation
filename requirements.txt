@@ -1,0 +1,5 @@
+langchain-core
+langchain_groq
+datasets
+langchain_community
+langchain_huggingface
