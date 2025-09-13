@@ -33,7 +33,27 @@ if selection == 'Personal PII':
         st.write("Your dictionary:")
         st.write(user_dict)
   if st.button("Generate Prompt"):
-    pass
+    # pass
+    prompt_text = """You are a Data Privacy Expert. You need to extract Personally Identifiable Information (PII).\n
+                            ### Your target PII is as follows:""""
+    for i in personal_pii_options:
+        prompt_text = prompt_text + "\n" + i
+    for i in user_dict.keys(:
+        prompt_text = prompt_text + "\n" + user_dict[i]
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
   
 
 
