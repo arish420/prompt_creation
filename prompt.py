@@ -17,7 +17,7 @@ if selection == 'Personal PII':
     )
   st.write(personal_pii_options)
 
-  regular_exp = st.text_input("Enter Regular Expression, if Multiple "
+  regular_exp = st.text_input("Enter Regular Expression, if Multiple ")
   user_dict = {}
   num_entries = st.number_input("How many key-value pairs do you want to add?", min_value=0, value=1)
   
