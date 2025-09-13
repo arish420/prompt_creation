@@ -37,11 +37,26 @@ if selection == 'Personal PII':
     prompt_text = """You are a Data Privacy Expert. You need to extract Personally Identifiable Information (PII).\n
                             ### Your target PII is as follows:"""
     for i in personal_pii_options:
-        st.write(i)
+        # st.write(i)
         prompt_text = prompt_text + "\n - " + i + "\n"
     for i in user_dict.keys():
         prompt_text = prompt_text + "\n" + i + " : " + user_dict[i] + "\n"
-    st.write(prompt_text)
+    
+
+    prompt_text = prompt_text + """ ### Output Format:
+                            {{
+                              pii: actual content
+                            }}
+
+                            Target Country: While extracting the above fields, keep in mind the format followed in {target_country}.
+
+                            Note:
+                            No leading and trailing explanation with output. Just a dictionary only.
+
+
+                            ### Target Text: {sensitive_text}""",
+                            # input_variables=['sensitive_text','target_country']
+    st.write(prompt_text)                        # )
 
 
     
