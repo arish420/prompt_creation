@@ -1,7 +1,8 @@
 import streamlit as st
 from langchain_core.prompts import PromptTemplate
 import io
-
+import json
+import base64
 
 st.title("Create your Custom Prompts")
 
@@ -65,7 +66,16 @@ if selection == 'Personal PII':
   # if st.button("Save & Download Template"):
     personal_pii = PromptTemplate(template=prompt_text,input_variables=['sensitive_text','target_country'])
     st.write(personal_pii)
-    personal_pii.save("template.json")
+    data = personal_pii.save("template.json")
+    # Convert dict to JSON string
+    json_str = json.dumps(data, indent=4)
+    
+    # Encode as base64 to make a download link
+    b64 = base64.b64encode(json_str.encode()).decode()
+    href = f'<a href="data:file/json;base64,{b64}" download="data.json">📥 Download JSON File</a>'
+    
+    # Show link in app
+    st.markdown(href, unsafe_allow_html=True)
 
     
     
