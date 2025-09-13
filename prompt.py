@@ -45,7 +45,7 @@ if selection == 'Personal PII':
         prompt_text = prompt_text + """\n""" + " - " + i + """ : """ + user_dict[i] + """\n"""
     
 
-    prompt_text = prompt_text + """ ### Output Format:
+    prompt_text = prompt_text + """\n ### Output Format:
                             {{
                               pii: actual content
                             }}
