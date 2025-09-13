@@ -28,7 +28,7 @@ if selection == 'Personal PII':
     
     for i in range(int(num_entries)):
         key = st.text_input(f"Enter Key{i+1}:", key=f"key_{i}")
-        value = st.text_input(f"Enter Regular Expression {i+1}:", key=f"value_{i}")
+        value = st.text_area(f"Enter Regular Expression {i+1}:", key=f"value_{i}")
         if key:  # Only add if a key is provided
             user_dict[key] = value
     
