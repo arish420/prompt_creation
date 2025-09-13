@@ -1,5 +1,6 @@
 import streamlit as st
 from langchain_core.prompts import PromptTemplate
+import io
 
 
 st.title("Create your Custom Prompts")
