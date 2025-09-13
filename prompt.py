@@ -62,7 +62,7 @@ if selection == 'Personal PII':
 
     st.write(prompt_text)                        # )
     # Save + Download
-  if st.button("Save & Download Template"):
+  # if st.button("Save & Download Template"):
       personal_pii = PromptTemplate(template=prompt_text,input_variables=['sensitive_text'])
       buffer = io.StringIO()
       personal_pii.save(buffer)   # saves as JSON to file-like object
