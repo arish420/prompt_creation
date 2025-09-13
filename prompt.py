@@ -68,7 +68,7 @@ if selection == 'Personal PII':
     st.write(personal_pii)
     data = personal_pii.save("template.json")
     # Convert dict to JSON string
-    json_str = json.dumps(personal_pii.save("template.json"), indent=4)
+    json_str = json.dumps(personal_pii.dict(), indent=4)
     st.write(data)
     
     # Encode as base64 to make a download link
