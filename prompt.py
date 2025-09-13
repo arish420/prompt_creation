@@ -61,16 +61,16 @@ if selection == 'Personal PII':
 
     st.write(prompt_text)                        # )
     # Save + Download
-    if st.button("Save & Download Template"):
-        buffer = io.StringIO()
-        personal_pii.save(buffer)   # saves as JSON to file-like object
-        data = buffer.getvalue()
-        st.download_button(
-            label="Download PromptTemplate JSON",
-            data=data,
-            file_name=f"{name}.json",
-            mime="application/json"
-        )
+  if st.button("Save & Download Template"):
+      buffer = io.StringIO()
+      personal_pii.save(buffer)   # saves as JSON to file-like object
+      data = buffer.getvalue()
+      st.download_button(
+          label="Download PromptTemplate JSON",
+          data=data,
+          file_name=f"{name}.json",
+          mime="application/json"
+      )
     
 
     
