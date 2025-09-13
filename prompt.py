@@ -17,7 +17,7 @@ if selection == 'Personal PII':
     )
   st.write(personal_pii_options)
 
-  st.expander("Regular Expression/Few-shots"):
+  with st.expander("Regular Expression/Few-shots"):
 
     regular_exp = st.write("Enter Regular Expression/Few-shots, if required -> e.g key: mac-address, value: regular expression to match mac-address")
     user_dict = {}
