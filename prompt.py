@@ -55,7 +55,7 @@ if selection == 'Personal PII':
                             No leading and trailing explanation with output. Just a dictionary only.
 
 
-                            ### Target Text: {sensitive_text}""",
+                            ### Target Text: {sensitive_text}"""
                             # input_variables=['sensitive_text','target_country']
     personal_pii = PromptTemplate(template=prompt_text,input_variables=['sensitive_text'])
 
