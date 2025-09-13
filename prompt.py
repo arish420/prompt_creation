@@ -32,5 +32,10 @@ if selection == 'Personal PII':
     if user_dict:
         st.write("Your dictionary:")
         st.write(user_dict)
+  if st.button("Generate Prompt"):
+    pass
+  
+
+
   
   
