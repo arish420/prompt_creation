@@ -40,8 +40,8 @@ if selection == 'Personal PII':
         st.write(i)
         prompt_text = prompt_text + "\n ###" + i + "\n"
     for i in user_dict.keys():
-        prompt_text = prompt_text + "\n" + user_dict[i]
-    st.write(prompt_text)
+        prompt_text = prompt_text + "\n" + user_dict[i] + "\n"
+     st.write(prompt_text)
 
 
     
