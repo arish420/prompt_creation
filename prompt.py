@@ -15,7 +15,7 @@ if selection == 'Personal PII':
   country = st.selectbox('Select', ('Pakistan','USA'))
   personal_pii_options = st.multiselect(
     "What are your favorite colors?",
-    ["Name","Email","Phone","Address", "Date of Birth","Mother's name","Social Media Handles","National ID Number (e.g., CNIC, SSN, Aadhaar)","Passport Number","Driver’s License Number","Voter ID Number","Tax Identification Number","Bank Account Number","Credit/Debit Card Numbers","Digital Wallet IDs (PayPal, Apple Pay, etc.)"],
+    ["Name","Email","Phone No","Address", "Date of Birth","Mother's name","Social Media Handles","National ID Number (e.g., CNIC, SSN, Aadhaar)","Passport Number","Driver’s License Number","Voter ID Number","Tax Identification Number","Bank Account Number","Credit/Debit Card Numbers","Digital Wallet IDs (PayPal, Apple Pay, etc.)"],
     default=["Name","Email","Phone"],
     )
   st.write(personal_pii_options)
@@ -69,7 +69,7 @@ if selection == 'Personal PII':
     data = personal_pii.save("template.json")
     # Convert dict to JSON string
     json_str = json.dumps(personal_pii.dict(), indent=4)
-    st.write(data)
+    # st.write(data)
     
     # Encode as base64 to make a download link
     b64 = base64.b64encode(json_str.encode()).decode()
