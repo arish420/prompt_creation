@@ -60,7 +60,7 @@ if selection == 'Personal PII':
                             # input_variables=['sensitive_text','target_country']
     
 
-    st.markdown(prompt_text)                        # )
+    # st.markdown(prompt_text)                        # )
     # Save + Download
   # if st.button("Save & Download Template"):
     personal_pii = PromptTemplate(template=prompt_text,input_variables=['sensitive_text','target_country'])
